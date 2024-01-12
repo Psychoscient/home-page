@@ -1,0 +1,324 @@
+:root {
+    --color-main: #db8770;
+  }
+  
+  @font-face {
+    font-family: "Bobby Jones";
+    src: url("./assets/fonts/bobby-jones-regular.otf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: "Bobby Jones Condensed";
+    src: url("./assets/fonts/bobby-jones-condensed.otf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: "Bobby Jones Soft";
+    src: url("./assets/fonts/bobby-jones-soft-regular.otf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: "BlueBerry";
+    src: url("./assets/fonts/Blueberry\ .ttf") format("truetype");
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Bobby Jones Condensed", sans-serif;
+    font-weight: 300;
+    color: #444;
+  }
+  
+  /* GENERAL ELEMENTS */
+  .section {
+    padding: 15rem 3rem;
+    border-top: 1px solid #ddd;
+    transition: transform 1s, opacity 1s;
+  }
+  
+  /* TITLE */
+  .title {
+    background-color: #efefef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+  }
+  
+  .title-name {
+    font-family: "BlueBerry";
+    font-size: 3.25rem;
+    font-weight: 400;
+    color: var(--color-main);
+    margin-bottom: 0;
+    padding-bottom: 0;
+    letter-spacing: 0.3rem;
+  }
+  
+  .title-place {
+    font-size: 2.8rem;
+    color: #637072;
+  }
+  
+  .title-message {
+    font-size: 1.5rem;
+    color: #b83c3c;
+  }
+  
+  /* NAV */
+  .nav-section {
+    background-color: var(--color-main);
+    border-top: 4px solid #000;
+    border-bottom: 4px solid #000;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  .nav-buttons {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    flex: 2;
+  }
+  
+  .nav-button {
+    cursor: pointer;
+    color: #000;
+    margin: 0 2rem;
+  }
+
+  .nav-left {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .nav-search {
+    cursor: pointer;
+    height: 2.5rem;
+    width: 2.5rem;
+    background: url("./assets/img/search-interface-symbol.png");
+    background-size: cover;
+  }
+
+  .nav-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+  .nav-right > * {
+    margin-left: 2rem;
+  }
+
+  .nav-cart {
+    cursor: pointer;
+    height: 2.4rem;
+    width: 2.4rem;
+    background: url("./assets/img/shopping-bag.png");
+    background-size: cover;
+  }
+  
+  .nav-account {
+    cursor: pointer;
+    height: 2.5rem;
+    width: 2.5rem;
+    background: url("./assets/img/profile-user.png");
+    background-size: cover;
+  }
+
+  /* slider start */
+
+  .slideshow {
+    width: auto;
+    height: auto;
+  }
+
+  .slider {
+    overflow: hidden;
+  }
+
+  .slides {
+    width: 500%;
+    height: 100%;
+    display: flex;
+  }
+
+  .slides input {
+    display: none;
+  }
+
+  .slide {
+    width: 20%;
+    transition: 2s;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* manual slide navigation */
+
+  .navigation-manual {
+    position: absolute;
+    width: 1400px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .manual-btn {
+    border: 2px solid orangered;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+
+  .manual-btn:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  .manual-btn:hover {
+    background: orangered;
+  }
+
+  #radio1:checked ~ .first {
+    margin-left: 0;
+  }
+
+  #radio2:checked ~ .first {
+    margin-left: -20%;
+  }
+
+  #radio3:checked ~ .first {
+    margin-left: -40%;
+  }
+
+  /* slider end */
+  /* voucher */
+
+  .voucher {
+    height: 60vh;
+    background-color: #F6D7D7;
+    background-image: url(./assets/img/background-voucher.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .voucher-image {
+    height: 90%;
+    flex-shrink: 1;
+  }
+
+  /* footer */
+
+  footer {
+    height: 40vh;
+    max-height: 40vh;
+    min-height: 40vh;
+    background-color: rgb(255,225,225);
+  }
+
+  .footer-content-container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .first-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+  }
+
+  .first-column > *:not(:last-child) {
+    margin-bottom: 1rem; /* Adjust the margin as needed */
+  }
+
+  .sugarxsalt-logo {
+    height: 10rem;
+    width: auto;
+    background-color: white;
+    border-radius: 50%;
+  }
+
+  .follow-us {
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  .socials-logo-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .socials-logo {
+    height: 2.5rem;
+    width: auto;
+    margin: 0.5rem 0.5rem;
+  }
+
+  .second-column {
+    display: flex;
+    text-align: center;
+    flex: 1;
+    font-size: 1.2rem;
+  }
+  .third-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 2;
+  }
+
+  .anchor-links {
+    display: flex;
+
+  }
+
+  .anchor-links-left, .anchor-links-center, .anchor-links-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }  
+
+  .anchor-links-left a:nth-child(1), .anchor-links-center a:nth-child(1), .anchor-links-right a:nth-child(1) {
+    margin-bottom: 1.5rem;
+  }
+    .anchor-links a {
+    text-decoration: none;
+    color: rgb(67,63,58);
+    font-size: 1.3rem;
+  }
+
+  .haxor-logo {
+    width: 10rem;
+    height: auto;
+    margin-top: 1rem;
+  }
